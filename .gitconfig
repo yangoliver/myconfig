@@ -1,0 +1,13 @@
+[user]
+    name = Yong Yang
+    email = yangoliver@gmail.com
+
+[sendemail]
+        smtpencryption = tls 
+        smtpuser = yang_oliver@hotmail.com
+        smtpserverport = 587 
+        smtpserver = smtp.live.com 
+[core]
+	editor = vi
+[format]
+	signoff = true
