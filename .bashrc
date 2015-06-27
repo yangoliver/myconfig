@@ -10,6 +10,7 @@ fi
 
 # User specific aliases and functions
 
-export EDITOR=vi
+export EDITOR=vim
+alias vi=vim
 alias ssh2='ssh oliver@192.168.92.131'
 alias git-sm='git send-email --smtp-server /usr/bin/msmtp'
