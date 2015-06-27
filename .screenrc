@@ -9,6 +9,10 @@ nonblock on
 #
 # UTF-8 is necessary.
 defutf8 on
+
+#scollback support
+termcapinfo xterm|xterms|xs ti@:te=\E[2J
+
 #
 # Change default scrollback value for new windows: scrollback 10000
 defscrollback 10000
