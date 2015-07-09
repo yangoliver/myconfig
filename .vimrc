@@ -16,6 +16,9 @@ filetype plugin on
 " 为特定文件类型载入相关缩进文件
 filetype indent on
 
+" Python use space instead of tab
+autocmd FileType python setlocal et sta sw=4 sts=4
+
 " 语法高亮
 syntax on
 
