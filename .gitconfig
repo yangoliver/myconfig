@@ -11,3 +11,7 @@
 	editor = vi
 [format]
 	signoff = true
+[push]
+	default = simple
+[http]
+	sslVerify = false
