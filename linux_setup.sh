@@ -27,7 +27,13 @@ if [ -f ~/.vimrc ]; then
 fi
 cp .vimrc ~/.vimrc
 
+if [ ! -d ~/.vim ]; then
+	mkdir ~/.vim
+fi
+
 if [ -f ~/.vim/spell/en.utf-8.add ]; then
 	cp ~/.vim/spell/en.utf-8.add ~/.vim/spell/en.utf-8.add.orig
-	cp en.utf-8.add ~/.vim/spell/en.utf-8.add
+else
+	mkdir -p ~/.vim/spell
 fi
+cp en.utf-8.add ~/.vim/spell/en.utf-8.add

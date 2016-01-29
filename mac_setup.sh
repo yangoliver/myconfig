@@ -4,7 +4,7 @@ if [ -f ~/.bash_profile ]; then
 	cp ~/.bash_profile ~/.bash_profile.orig
 fi
 # mac os use .bash_profile because the bash gets invoked via login way
-cp .bash_rc ~/.bash_profile
+cp .bashrc ~/.bash_profile
 
 cp cs_bld.sh ~/cs_bld.sh
 
@@ -30,5 +30,7 @@ cp .vimrc ~/.vimrc
 
 if [ -f ~/.vim/spell/en.utf-8.add ]; then
 	cp ~/.vim/spell/en.utf-8.add ~/.vim/spell/en.utf-8.add.orig
-	cp en.utf-8.add ~/.vim/spell/en.utf-8.add
+else
+	mkdir -p ~/.vim/spell
 fi
+cp en.utf-8.add ~/.vim/spell/en.utf-8.add
