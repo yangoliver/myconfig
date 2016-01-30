@@ -12,5 +12,6 @@ fi
 
 export EDITOR=vim
 alias vi=vim
+alias ls='ls -G'
 alias ssh2='ssh oliver@192.168.92.131'
 alias git-sm='git send-email --smtp-server /usr/bin/msmtp'

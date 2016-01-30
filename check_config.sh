@@ -4,6 +4,10 @@ if [ -f ~/.bashrc ]; then
 	diff -u .bashrc ~/.bashrc
 fi
 
+if [ -f ~/.bash_profile ]; then
+	diff -u .bashrc ~/.bash_profile
+fi
+
 if [ -f ~/cs_bld.sh ]; then
 	diff -u cs_bld.sh ~/cs_bld.sh
 fi
