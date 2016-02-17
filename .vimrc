@@ -107,10 +107,10 @@ set nowrap
 set smarttab
 
 " add any database in current directory
-" New VIM doesn't need it, old VIM need it
-"if filereadable("cscope.out")
-"cs add cscope.out
-"endif
+" New VIM on Linux doesn't need it, but VIM for mac OS need it
+if filereadable("cscope.out")
+cs add cscope.out
+endif
 
 " use cscope.out as tags
 set cscopetag
@@ -131,6 +131,8 @@ autocmd FileType xml,html,c,cs,java,perl,shell,bash,cpp,python,vim,php,ruby set 
 endif
 
 
-"<F2>开启/关闭行号显示:
-nnoremap <F2> :set nonumber!<CR>:set foldcolumn=0<CR>
+"ctrl + h 开启/关闭行号显示:
+noremap <C-h> :set nonumber!<CR>:set foldcolumn=0<CR>
 
+"For mac only ctrl + d 开启graphviz dot脚本编译并预览图片
+noremap <C-d> :!dot "%:p" -Tpng -o %:r.png <CR>:!open %:r.png <CR>
