@@ -10,8 +10,20 @@ fi
 
 # User specific aliases and functions
 
+export PATH=/usr/local/bin:$PATH
+if [ -d ~/ws/mytools/github ]; then
+	export PATH=~/ws/mytools/github:$PATH
+fi
+
 export EDITOR=vim
 alias vi=vim
 alias ls='ls -G'
 alias ssh2='ssh oliver@192.168.92.131'
 alias git-sm='git send-email --smtp-server /usr/bin/msmtp'
+alias git-cm='git commit -s'
+
+# For easy ssh access
+#alias sshvm='ssh <id>@<ip>'
+
+# For VM serial console access
+#alias socat1='socat -d -d /Users/yango/tmp/com1 TCP4-LISTEN:9999 &'
