@@ -20,6 +20,10 @@ if [ -f ~/.gitconfig ]; then
 	diff -u  .gitconfig ~/.gitconfig
 fi
 
+if [ -f ~/.gdbinit ]; then
+	diff -u  .gdbinit ~/.gdbinit
+fi
+
 if [ -f ~/.msmtprc ]; then
 	diff -u .msmtprc ~/.msmtprc
 fi

@@ -12,6 +12,11 @@ if [ -f ~/.gitconfig ]; then
 fi
 cp .gitconfig ~/.gitconfig
 
+if [ -f ~/.gdbinit ]; then
+	cp ~/.gdbinit ~/.gdbinit.orig
+fi
+cp .gdbinit ~/.gdbinit
+
 if [ -f ~/.msmtprc ]; then
 	cp ~/.msmtprc ~/.msmtprc.orig
 fi
