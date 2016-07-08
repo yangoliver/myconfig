@@ -15,6 +15,7 @@ if [ -d ~/ws/mytools/github ]; then
 	export PATH=~/ws/mytools/github:$PATH
 fi
 
+set -o vi
 export EDITOR=vim
 alias vi=vim
 #alias ls='ls -G'
