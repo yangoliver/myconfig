@@ -10,7 +10,9 @@ fi
 
 # User specific aliases and functions
 
-export PATH=/usr/local/bin:$PATH
+# golang support
+export GOPATH=$HOME/ws/go
+export PATH=/usr/local/bin:/usr/local/go/bin:$PATH:$GOPATH/bin
 if [ -d ~/ws/mytools/github ]; then
 	export PATH=~/ws/mytools/github:$PATH
 fi
