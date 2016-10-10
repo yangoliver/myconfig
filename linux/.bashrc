@@ -12,6 +12,7 @@ fi
 
 # golang support
 export GOPATH=$HOME/ws/go
+export GOBIN=$HOME/ws/go/bin
 export PATH=/usr/local/bin:/usr/local/go/bin:$PATH:$GOPATH/bin
 if [ -d ~/ws/mytools/github ]; then
 	export PATH=~/ws/mytools/github:$PATH
