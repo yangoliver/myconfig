@@ -21,6 +21,7 @@ fi
 set -o vi
 export EDITOR=vim
 alias vi=vim
+alias cs='cscope -dpn'
 #alias ls='ls -G'
 #alias ls='ls --color'
 alias ssh2='ssh oliver@192.168.92.131'
