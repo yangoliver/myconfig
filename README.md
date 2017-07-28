@@ -4,7 +4,7 @@ Just put all my personal dev config files here.
 
 	qemu-net-user.sh - qemu-kvm setting for Linux kernel dev
 
-- Linux: Linux/mac dev configs
+- linux: Linux/mac dev configs
 
     linux_setup.sh - installed all config files for Linux.
 
