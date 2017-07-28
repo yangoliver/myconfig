@@ -1,5 +1,8 @@
 Just put all my personal dev config files here.
 
+- kvm: kvm setting for development
+
+	qemu-net-user.sh - qemu-kvm setting for Linux kernel dev
 
 - Linux: Linux/mac dev configs
 
