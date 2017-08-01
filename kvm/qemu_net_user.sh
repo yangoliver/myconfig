@@ -1,4 +1,22 @@
 #!/bin/bash
+#
+# Notes:
+# - initrd
+#   The initrd option might not be required, if kernel could build the
+#   boot disk drivers with in-kernel mode.
+# -S
+#  It might not be required, if we don't want to debug early boot issue.
+#
+# -kgdboc
+#  Qemu has its built-in kernel debug capabilities and gdb debug server.
+#  The kgdb is not required, if kdump in qemu could works well. However,
+#  if kdump couldn't work, and qemu dump couldn't make sure all CPUs got
+#  freezon by panic routine. The kgdb driver could make sure that by
+#  invoking the NMI IPIs against all CPUs. Then we could trigger qemu
+#  dump to save the core file.
+#
+
+
 kernel=/boot/vmlinuz-3.10.0
 initrd=/boot/initramfs-3.10.0.img
 sudo /usr/libexec/qemu-kvm \
@@ -11,7 +29,8 @@ sudo /usr/libexec/qemu-kvm \
 	-kernel $kernel \
 	-initrd $initrd \
 	-s \
-	-append "root=/dev/sda1 rw console=ttyS0,115200 kgdboc=kbd,ttyS0,115200 kgdbwait crashkernel=auto" \
+	-S \
+	-append "root=/dev/sda1 rw console=ttyS0,115200 kgdboc=kbd,ttyS0,115200 nmi_watchdog=nopanic softlockup_panic=0 crashkernel=auto" \
 	-drive file=/dev/sdb,id=foo1 \
 	-nographic \
 	-vga none \
