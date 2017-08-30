@@ -13,13 +13,14 @@
 # Lines beginning with "#" are comments, and ignored by Alpine.
 
 # Over-rides your full name from Unix password file. Required for PC-Alpine.
-personal-name=yang_oliver
+personal-name=yangoliver
 
 # Sets domain part of From: and local addresses in outgoing mail.
-user-domain=hotmail.com
+user-domain=aliyun.com
 
 # List of SMTP servers for sending mail. If blank: Unix Alpine uses sendmail.
-smtp-server=smtp.live.com:587/tls/user=yang_oliver@hotmail.com
+# Fix aliyun smtp problem by ssl keyword
+smtp-server=smtp.aliyun.com:465/ssl/user=yangoliver@aliyun.com
 #smtp-server=
 
 # NNTP server for posting news. Also sets news-collections for news reading.
@@ -81,7 +82,7 @@ initial-keystroke-list=
 default-composer-hdrs=
 
 # Add these customized headers (and possible default values) when composing
-customized-hdrs=From: Oliver Yang <yang_oliver@hotmail.com>
+customized-hdrs=From: Oliver Yang <yangoliver@aliyun.com>
 
 # When viewing messages, include this list of headers
 viewer-hdrs=
@@ -353,7 +354,7 @@ incoming-folders=
 # the default for Saves. Example: Main {host1}mail/[], Desktop mail\[]
 # Syntax: optnl-label {optnl-imap-hostname}optnl-directory-path[]
 folder-collections=mail/[],
-	hotmail {imap-mail.outlook.com/ssl/user=yang_oliver@hotmail.com}[]
+	aliyun {imap.aliyun.com:993/ssl/user=yangoliver@aliyun.com}[]
 
 # List, only needed if nntp-server not set, or news is on a different host
 # than used for NNTP posting. Examples: News *[] or News *{host3/nntp}[]
@@ -459,7 +460,8 @@ new-version-threshold=
 disable-these-drivers=
 
 # List of SASL authenticators to disable.
-disable-these-authenticators=
+# Fix aliyun imap auth problem
+disable-these-authenticators=EXTERNAL
 
 # Set by Alpine; contains data for caching remote address books.
 remote-abook-metafile=

@@ -1,0 +1,15 @@
+# default
+account aliyun
+protocol smtp
+host smtp.aliyun.com
+from yangoliver@aliyun.com
+user yangoliver@aliyun.com
+password ***
+port 25
+auth login
+tls off
+tls_certcheck off
+syslog LOG_MAIL
+
+# set a default account
+account default: aliyun
